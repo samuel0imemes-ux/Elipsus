@@ -1,2 +1,25 @@
-with:
-  target: apk
+name: Compilar Elipsus APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Compilar para Android
+        id: build
+        uses: flet-dev/flet-build-action@v1
+        with:
+          target: apk
+
+      - name: Guardar APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: Elipsus-APK
+          path: ${{ steps.build.outputs.archive-path }}
+          archive: false
+          if-no-files-found: error
