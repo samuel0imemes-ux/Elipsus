@@ -14,5 +14,15 @@ def main(page: ft.Page):
         perimetro = pi * (float(semiejeA.value)+float(semiejeB.value)) * factor 
         C.value = str(perimetro) + "M"
     D = ft.Button(content="Calcular", on_click=IngresarSemiejes)
-    page.add(semiejeA,semiejeB,D,C)
+    page.add(
+    ft.Container(
+        content=ft.Column(
+            controls=[semiejeA, semiejeB, D, C],
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            alignment=ft.MainAxisAlignment.CENTER,
+        ),
+        expand=True,
+        alignment=ft.Alignment.CENTER,
+    )
+)
 ft.run(main)
