@@ -1,11 +1,11 @@
 [project]
-name = "elipsus"
-version = "0.1.0"
+name = "Elipsus"
+version = "2.0"
 description = ""
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
-    { name = "Flet developer", email = "you@example.com" }
+    { name = "SamuelDev", email = "samuel0imemes@gmail.com" }
 ]
 dependencies = [
     "flet>=1.0.4"
@@ -28,10 +28,10 @@ pythonpath = ["src"]
 
 [tool.flet]
 desktop_flavor = "light"    # Change to "full" to use flet-audio and flet-video
-org = "com.mycompany"
-product = "elipsus"
-company = "Flet"
-copyright = "Copyright (C) 2023-2026 by Flet"
+org = "com.fletdev"
+product = "Elipsus"
+company = "SamuelDev"
+copyright = "None"
 
 # src/assets/icon.png is the icon for every platform. Keep it transparent and
 # filling the whole canvas: web, Windows and Linux show it as-is, and Flet
